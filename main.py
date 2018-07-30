@@ -4,6 +4,8 @@ import os
 from urllib.parse import unquote
 
 def authorized(question):
+  if question == None:
+    return False
   if 'token' in question and question['token'] == os.environ['SECRET']:
     return True
   else:
