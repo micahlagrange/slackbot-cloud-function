@@ -4,8 +4,6 @@ import os
 from urllib.parse import unquote
 
 def authorized(question):
-  if question == None:
-    return False
   if 'token' in question and question['token'] == os.environ['SECRET']:
     return True
   else:
@@ -20,8 +18,8 @@ def valid(question):
     return False
   
 def parse_slack_text(text):
-  clean = unquote(text)
-  return ' '.join(clean.split('+'))
+  clean = ' '.join(text.split('+'))
+  return unquote(clean)
   
 def request_to_dict(request_data):
   body = {}

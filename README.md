@@ -5,7 +5,6 @@ Upload the python script as a zip to google cloud functions and configure a slac
 
 Upload zip structure:  
 
-/main.py  
-
-/requirements.txt  
+/main.py
+/requirements.txt
 
